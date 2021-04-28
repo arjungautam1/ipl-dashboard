@@ -1,12 +1,11 @@
 import React from 'react';
 
-const MatchSmallCard = () => {
+export const MatchSmallCard = ({match}) => {
     return (
         <div className={"MatchSmallCard"}>
-            <p>Match Small Card</p>
+
+            <p>{match.team1} VS {match.team2}</p>
 
         </div>
     );
 };
-
-export default MatchSmallCard;
