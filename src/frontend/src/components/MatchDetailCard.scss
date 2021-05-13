@@ -1,8 +1,12 @@
 .MatchDetailCard {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 10px;
+  padding: 20px;
   margin-bottom: 20px;
+
+  .match-date, .match-city, .match-result {
+    margin-top: 10px;
+  }
 
   .innings-details {
     text-align: right;
@@ -13,14 +17,10 @@
 
   }
 
-  .match-date, .match-city, .match-result {
-
-    margin-top: 10px;
-
-  }
 
   .vs {
 
   }
 
 }
+

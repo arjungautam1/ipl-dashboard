@@ -1,5 +1,6 @@
 .TeamPage {
 
+  max-height: 883px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
@@ -13,8 +14,10 @@
 
   }
 
-  .win-loss-section{
+  .win-loss-section {
     justify-self: center;
+    padding: 70px;
+    text-align: center;
   }
 
   .team-name {
@@ -24,6 +27,12 @@
 
   .match-detail-section {
     grid-column: span 4;
+  }
+
+  .more-link {
+    align-self: center;
+    justify-self: center;
+    font-size: 1.5rem;
   }
 
 
