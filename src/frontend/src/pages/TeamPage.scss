@@ -8,15 +8,20 @@
   grid-row-gap: 10px;
 
   .team-name-section {
-    grid-column: span 3;
+    grid-column: span 2;
     justify-self: start;
     align-self: end;
 
   }
 
-  .win-loss-section {
+  .color-symbol{
     justify-self: center;
     padding: 70px;
+  }
+
+  .win-loss-section {
+    justify-self: center;
+    padding: 60px;
     text-align: center;
   }
 
@@ -33,6 +38,20 @@
     align-self: center;
     justify-self: center;
     font-size: 1.5rem;
+  }
+  .color-symbol{
+    margin-top: 61px;
+
+
+  }
+  .won-div{
+    border: 20px solid #4A4A4A;
+    margin-bottom: 5px;
+
+  }
+  .loss-div{
+    border: 20px solid #869080;
+    margin-bottom: 5px;
   }
 
 

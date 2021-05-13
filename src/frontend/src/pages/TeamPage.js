@@ -4,7 +4,7 @@ import {MatchDetailCard} from "../components/MatchDetailCard";
 import {useParams} from 'react-router-dom'
 
 import './TeamPage.scss'
-import { PieChart } from 'react-minimal-pie-chart';
+import {PieChart} from 'react-minimal-pie-chart';
 
 export const TeamPage = () => {
 
@@ -36,14 +36,28 @@ export const TeamPage = () => {
                 Wins / Losses
                 <PieChart
                     data={[
-                        { title: 'Losses', value: team.totalMatches-team.totalWins, color: '#869080' },
-                        { title: 'Wins', value: team.totalWins, color: '#4A4A4A' },
-                     ]}
+                        {title: 'Losses', value: team.totalMatches - team.totalWins, color: '#869080'},
+                        {title: 'Wins', value: team.totalWins, color: '#4A4A4A'},
+                    ]}
                 />
             </div>
+            <div className={"color-symbol"}>
+
+                <div style={{display:"flex"}}>
+                    <div className={"won-div"}></div>
+                    <div style={{padding:"10px"}}>Win</div>
+                </div>
+
+                <div style={{display:"flex" }}>
+                    <div className={"loss-div"}></div>
+                    <div style={{padding:"10px"}}>Loss</div>
+                </div>
+
+            </div>
+
 
             <div className={"match-detail-section"}>
-              <h1>Latest Matches</h1>
+                <h1>Latest Matches</h1>
                 <MatchDetailCard teamName={team.teamName} match={team.matchList[0]}/>
             </div>
             {team.matchList.slice(1).map(match => <MatchSmallCard teamName={team.teamName} match={match}/>)}
