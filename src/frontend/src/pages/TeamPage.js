@@ -3,11 +3,13 @@ import {MatchSmallCard} from "../components/MatchSmallCard";
 import {MatchDetailCard} from "../components/MatchDetailCard";
 import {useParams} from 'react-router-dom'
 
+import './TeamPage.scss'
+
 export const TeamPage = () => {
 
 
     const [team, setTeam] = useState({matchList: []});
-    const {teamName}=useParams();
+    const {teamName} = useParams();
 
     useEffect(
         () => {
@@ -21,15 +23,23 @@ export const TeamPage = () => {
         [teamName]
     );
 
-    if(!team || !team.teamName){
+    if (!team || !team.teamName) {
         return <h1>Team not found</h1>
     }
 
     return (
         <div className="TeamPage">
-            <h1>{team.teamName}</h1>
-            <MatchDetailCard teamName={team.teamName} match={team.matchList[0]}/>
+            <div className={"team-name-section"}><h1 className={"team-name"}>{team.teamName}</h1></div>
+
+            <div className={"win-loss-section"}>Wins / Losses</div>
+
+            <div className={"match-detail-section"}>
+                <MatchDetailCard teamName={team.teamName} match={team.matchList[0]}/>
+            </div>
             {team.matchList.slice(1).map(match => <MatchSmallCard teamName={team.teamName} match={match}/>)}
+            <div>
+                <a href={"#"}>More</a>
+            </div>
         </div>
     );
 }
