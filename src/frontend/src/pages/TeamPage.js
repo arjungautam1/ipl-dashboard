@@ -1,7 +1,7 @@
 import {React, useEffect, useState} from 'react'
 import {MatchSmallCard} from "../components/MatchSmallCard";
 import {MatchDetailCard} from "../components/MatchDetailCard";
-import {useParams} from 'react-router-dom'
+import {Link, useParams} from 'react-router-dom'
 
 import './TeamPage.scss'
 import {PieChart} from 'react-minimal-pie-chart';
@@ -43,14 +43,14 @@ export const TeamPage = () => {
             </div>
             <div className={"color-symbol"}>
 
-                <div style={{display:"flex"}}>
+                <div style={{display: "flex"}}>
                     <div className={"won-div"}></div>
-                    <div style={{padding:"10px"}}>Win</div>
+                    <div style={{padding: "10px"}}>Win</div>
                 </div>
 
-                <div style={{display:"flex" }}>
+                <div style={{display: "flex"}}>
                     <div className={"loss-div"}></div>
-                    <div style={{padding:"10px"}}>Loss</div>
+                    <div style={{padding: "10px"}}>Loss</div>
                 </div>
 
             </div>
@@ -62,7 +62,7 @@ export const TeamPage = () => {
             </div>
             {team.matchList.slice(1).map(match => <MatchSmallCard teamName={team.teamName} match={match}/>)}
             <div className={"more-link"}>
-                <a href={"#"}>More</a>
+                <Link to={`/teams/${teamName}/matches/${process.env.REACT_APP_DATA_END_YEAR}`}>More</Link>
             </div>
         </div>
     );

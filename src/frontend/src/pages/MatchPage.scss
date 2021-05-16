@@ -1,0 +1,29 @@
+.MatchPage {
+  display: flex;
+  grid-template-columns: 1fr 5fr;
+  grid-column-gap: 20px;
+
+  .year-selector {
+    justify-self: end;
+    padding: 20px;
+  }
+  .page-heading{
+    margin: 20px auto;
+    text-align: center;
+  }
+  .color{
+    justify-self: start;
+    padding-top: 80px;
+    margin-left: 20px;
+  }
+
+  .won-div{
+    border: 20px solid #4A4A4A;
+    margin-bottom: 5px;
+
+  }
+  .loss-div{
+    border: 20px solid #869080;
+    margin-bottom: 5px;
+  }
+}
