@@ -45,12 +45,12 @@ export const TeamPage = () => {
 
                 <div style={{display: "flex"}}>
                     <div className={"won-div"}></div>
-                    <div style={{padding: "10px"}}>Win</div>
+                    <div style={{padding: "10px"}}>Won</div>
                 </div>
 
                 <div style={{display: "flex"}}>
                     <div className={"loss-div"}></div>
-                    <div style={{padding: "10px"}}>Loss</div>
+                    <div style={{padding: "10px"}}>Lost</div>
                 </div>
 
             </div>
@@ -62,7 +62,7 @@ export const TeamPage = () => {
             </div>
             {team.matchList.slice(1).map(match => <MatchSmallCard teamName={team.teamName} match={match}/>)}
             <div className={"more-link"}>
-                <Link to={`/teams/${teamName}/matches/${process.env.REACT_APP_DATA_END_YEAR}`}>More</Link>
+                <Link to={`/teams/${teamName}/matches/${process.env.REACT_APP_DATA_END_YEAR}`}>More >></Link>
             </div>
         </div>
     );

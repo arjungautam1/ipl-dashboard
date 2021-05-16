@@ -23,7 +23,7 @@ export const MatchPage = () => {
         <div className="MatchPage">
 
             <div className={"year-selector"}>
-                <h3>Select Year</h3>
+                <h3 className={"heading_match"}>Select Year</h3>
                 <YearSelector teamName={teamName}/>
             </div>
 
@@ -41,12 +41,12 @@ export const MatchPage = () => {
 
                 <div style={{display: "flex"}}>
                     <div className={"won-div"}></div>
-                    <div style={{padding: "10px"}}>Win</div>
+                    <div style={{padding: "10px"}}>Won</div>
                 </div>
 
                 <div style={{display: "flex"}}>
                     <div className={"loss-div"}></div>
-                    <div style={{padding: "10px"}}>Loss</div>
+                    <div style={{padding: "10px"}}>Lost</div>
                 </div>
 
             </div>

@@ -1,7 +1,8 @@
 .MatchPage {
   display: flex;
   grid-template-columns: 1fr 5fr;
-  grid-column-gap: 20px;
+  grid-column-gap: 10px;
+  margin-top: 30px;
 
   .year-selector {
     justify-self: end;
@@ -25,5 +26,9 @@
   .loss-div{
     border: 20px solid #869080;
     margin-bottom: 5px;
+  }
+  .heading_match{
+    text-align: center;
+
   }
 }
