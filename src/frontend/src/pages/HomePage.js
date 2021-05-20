@@ -2,6 +2,7 @@ import {React, useEffect, useState} from 'react'
 import {TeamTile} from "../components/TeamTile";
 
 import './HomePage.scss'
+import Footer from "../components/Footer";
 
 export const HomePage = () => {
 
@@ -32,6 +33,7 @@ export const HomePage = () => {
                 {teams.map(team=><TeamTile teamName={team.teamName}/>)}
             </div>
         </div>
+
 
 
     );
