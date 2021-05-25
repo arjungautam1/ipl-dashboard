@@ -13,8 +13,8 @@ export const YearSelector = ({teamName}) => {
     return (
         <ol className={"yearSelector"}>
             {years.map(year =>
-                <li>
-                    <Link to={`/teams/${teamName}/matches/${year}`}>{year}</Link>
+                <li key={year}>
+                    <Link  to={`/teams/${teamName}/matches/${year}`}>{year}</Link>
                 </li>
             )}
         </ol>
